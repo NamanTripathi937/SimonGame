@@ -1,8 +1,13 @@
-var level = 0;var i = 0;var start = false;
+var level = 0;var i = 0;var start = false;var prev=5;
 var userClickedPattern = [];
 var gamePattern = [];
 var buttonColors = ["red" , "blue" , "green","yellow"];
 $(document).keypress(function(){
+    if(!start){
+        nextSequence();
+    }
+})
+$(".start-button").click(function(){
     if(!start){
         nextSequence();
     }
@@ -42,6 +47,9 @@ function nextSequence(){
     level++;
     $("#level-title").text("LEVEL  "+ level);
     var randomNumber= Math.floor(Math.random()*4);
+    if(i!=0){
+
+    }
     var randomChosenColor = buttonColors[randomNumber];
     gamePattern.push(randomChosenColor);
     $("#"+randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
