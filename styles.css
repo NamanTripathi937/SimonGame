@@ -26,8 +26,8 @@ body {
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 12rem;
+  width: 12rem;
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -36,7 +36,28 @@ body {
   background-color: red;
   opacity: 0.8;
 }
-
+@media (width <= 1000px) {
+  .btn {
+    width: 18rem;
+    height: 20rem;
+  }
+  #level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 4rem;
+    margin:  30% 2% 10% 2%;
+    color: #FEF2BF;
+  }
+  .second-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    margin:  6% 5% 20% 5%;
+    color: white;
+  }
+  .container {
+    width: 80%;
+    
+  }
+}
 .red {
   background-color: red;
 }
